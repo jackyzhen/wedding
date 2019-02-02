@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015-ie": "^6.7.0",
+    "bulma": "^0.6.0",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.1",
+    "npm-run-all": "^4.1.3",
+    "cpx": "^1.5.0"
+  },
+  "scripts": {
+    "css-deploy": "npm run css-build && npm run css-postcss",
+    "css-build": "node-sass styles/main.scss public/css/main.css",
+    "css-postcss": "postcss --use autoprefixer --output public/css/main.css public/css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "build": "rm -rf public && mkdir public && cp -r static public/ && cp index.html public/index.html && npm run css-deploy && npm run js-build",
+    "js-build": "babel js --out-dir public/lib",
+    "js-watch": "npm run js-build -- --watch",
+    "mv-static": "cpx ./index.html public/ --watch && cpx ./static/* public/static/ --watch",
+    "start": "npm-run-all --parallel mv-static css-watch js-watch"
+  }
+}
