@@ -1,6 +1,6 @@
 # Website for Jacky and Sadhana's Wedding
 
-Hosted at [jackyandsadhana.com](jackyandsadhana.com)
+Hosted at [jackyandsadhana.com](https://jackyandsadhana.com)
 
 
 ## TODO
