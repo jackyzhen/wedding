@@ -1,5 +1,4 @@
 const form = document.getElementById("rsvp-form");
-const postLocation = form.getAttribute("action");
 const invite = document.getElementById("inviteCode");
 const inviteHash =
   "b5f57d8e7e1a335199c661a433e23d45c1ba707ec4b2af4ef057de28caef80e9";
@@ -17,10 +16,12 @@ form.addEventListener("submit", e => {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const guests = document.getElementById("email").value;
-  const data = `name=${name}&email=${email}&guests=${guests}&inviteCode=${inviteCode}`;
+  const data = `form-name=RSVP&name=${name}&email=${email}&guests=${guests}&inviteCode=${
+    inviteCode.value
+  }`;
 
   const request = new XMLHttpRequest();
-  request.open("POST", postLocation, true);
+  request.open("POST", "/", true);
   request.setRequestHeader(
     "Content-Type",
     "application/x-www-form-urlencoded; charset=UTF-8"
