@@ -1,10 +1,25 @@
 const form = document.getElementById("rsvp-form");
-const invite = document.getElementById("inviteCode");
+const nameField = document.getElementById("name");
+const emailField = document.getElementById("email");
+const guestsField = document.getElementById("guests");
+const inviteField = document.getElementById("inviteCode");
+
 const inviteHash =
   "b5f57d8e7e1a335199c661a433e23d45c1ba707ec4b2af4ef057de28caef80e9";
-
 const warning = document.getElementById("invite-warn");
+
 warning.style.visibility = "hidden";
+
+const closeModalButton = document.getElementById("close-modal");
+const modalBackground = document.getElementById("modal-background");
+
+closeModalButton.addEventListener("click", e => {
+  toggleSuccessModal();
+});
+
+modalBackground.addEventListener("click", e => {
+  toggleSuccessModal();
+});
 
 form.addEventListener("submit", e => {
   e.preventDefault();
@@ -13,13 +28,12 @@ form.addEventListener("submit", e => {
     return;
   }
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const guests = document.getElementById("email").value;
-  const data = `form-name=RSVP&name=${name}&email=${email}&guests=${guests}&inviteCode=${
-    inviteCode.value
-  }`;
+  const name = nameField.value;
+  const email = emailField.value;
+  const guests = guestsField.value;
+  const invite = inviteField.value;
 
+  const data = `form-name=RSVP&name=${name}&email=${email}&guests=${guests}&inviteCode=${invite}`;
   const request = new XMLHttpRequest();
   request.open("POST", "/", true);
   request.setRequestHeader(
@@ -27,33 +41,63 @@ form.addEventListener("submit", e => {
     "application/x-www-form-urlencoded; charset=UTF-8"
   );
   request.send(data);
+
+  resetForm();
+  toggleSuccessModal();
 });
 
+function resetForm() {
+  nameField.value = "";
+  emailField.value = "";
+  guestsField.value = "";
+  inviteField.value = "";
+}
+
+function toggleSuccessModal() {
+  const htmlEl = document.getElementById("highest");
+  const modalEl = document.getElementById("modal");
+  toggleClass(htmlEl, "is-clipped");
+  toggleClass(modalEl, "is-active");
+}
+
 function validateCode() {
-  const inviteCode = invite.value;
+  const inviteCode = inviteField.value;
   const invalidClass = "is-danger";
 
   if (sha256(inviteCode) !== inviteHash) {
     warning.style.visibility = "visible";
 
-    if (invite.classList) invite.classList.add(invalidClass);
-    else invite.className += " " + invalidClass;
+    if (inviteField.classList) inviteField.classList.add(invalidClass);
+    else inviteField.className += " " + invalidClass;
     return false;
   }
 
   warning.style.visibility = "hidden";
 
-  if (invite.classList) invite.classList.remove(invalidClass);
+  if (inviteField.classList) inviteField.classList.remove(invalidClass);
   else
-    invite.className = invite.className.replace(
+    inviteField.className = inviteField.className.replace(
       new RegExp(
         "(^|\\b)" + invalidClass.split(" ").join("|") + "(\\b|$)",
         "gi"
       ),
       " "
     );
-
   return true;
+}
+
+function toggleClass(el, className) {
+  if (el.classList) {
+    el.classList.toggle(className);
+  } else {
+    var classes = el.className.split(" ");
+    var existingIndex = classes.indexOf(className);
+
+    if (existingIndex >= 0) classes.splice(existingIndex, 1);
+    else classes.push(className);
+
+    el.className = classes.join(" ");
+  }
 }
 
 // simple sha256 from http://geraintluff.github.io/sha256/
