@@ -4,88 +4,175 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jacky and Sadhana</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>S&J</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="static/favicon.png" />
+
   </head>
   <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://jackyandsadhana.com">
+          <span class="small-logo">S</span>
+          <img src="static/wedding-ring.svg" width="30" height="30">
+          <span class="small-logo">J</span>
+        </a>
 
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true">Marriage</span>
+          <span aria-hidden="true">Venue</span>
+          <span aria-hidden="true">RSVP</span>
+          <span aria-hidden="true">About Us</span>
+          <span aria-hidden="true">FAQ</span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#marriage">
+            Marriage
+          </a>
+          <a class="navbar-item" href="#venue">
+            Venue
+          </a>
+          <a class="navbar-item" href="#how-we-met">
+            About Us
+          </a>
+          <a class="navbar-item" href="#faq">
+            FAQ
+          </a>
+
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary" href="#rsvp">
+                <strong>RSVP</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <section class="hero is-medium is-primary us">
       <div class="hero-body">
         <div class="container">
           <div class="columns">
             <div class="column is-8-desktop is-offset-2-desktop has-text-centered">
-              <h1 class="heading title is-2 is-spaced">
-                Jacky and Sadhana are getting married!
+
+              <h1 class="heading title is-2 is-spaced logo">
+                <span>Sadhana</span>
+                <img src="static/wedding-ring.svg" width="70" height="70" class="big-icon" />
+                <span>Jacky</span>
               </h1>
-              <h2 class="subtitle is-4">
-                ...and we'd love for you to come celebrate it with us
-              </h2>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="marriage">
       <div class="container">
         <div class="columns">
           <div class="column is-8-desktop is-offset-2-desktop">
-            <div class="content">
-              <h3 class="heading">Venue</h3>
-              <h5>Sorrento in the Park, Cornwall Park </h5>
-              <h5>670 Manukau Rd, Royal Oak, Auckland 1023</h5>
-              <h6>Saturday August 31st</h6>
-              <h6>Please be seated for the ceremony by 03.15pm</h6>
-              <h6>Reception to follow after</h6>
+            <div class="content has-text-centered">
+              <h3 class="heading is-size-3">Sadhana and Jacky are getting married...</h3>
+              <p class="is-size-5">
+                On the 31st of August, and we'd love for you to come celebrate with us!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz6XbcaJIDW0RQBpwF2akc9k&key=AIzaSyDnsHEzFvjPjlr6xtjQ4zsAewD45lkYXpI" allowfullscreen></iframe>
+    <section class="section" id="venue">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content has-text-centered">
+              <h3 class="heading heading is-size-3">Venue</h3>
+              <p class="is-size-5"><strong>Saturday, 31st August 2019</strong></p>
+              <p class="is-size-5">Sorrento in the Park, Cornwall Park. 670 Manukau Rd, Royal Oak, Auckland NZ. </p>
+              <p class="is-size-5"> Please be seated for the ceremony by <strong>03.15pm</strong>.</p>
+              <p class="is-size-5">Reception to follow after.</p>
 
-              <hr class="hr" />
-
+              <iframe width="750" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz6XbcaJIDW0RQBpwF2akc9k&key=AIzaSyDnsHEzFvjPjlr6xtjQ4zsAewD45lkYXpI" allowfullscreen></iframe>            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="rsvp">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content has-text-justified">
               <h3 class="heading">RSVP</h3>
               <form id="rsvp-form" name="RSVP" method="POST" data-netlify="true">
                 <div class="field">
-                  <label class="label">Name</label>
+                  <label class="label">Your Name:</label>
                   <div class="control">
                     <input class="input" type="text" id="name" name="name" required/>
                   </div>
                 </div>
                 <div class="field">
-                  <label class="label">Email</label>
+                  <label class="label">Email:</label>
                   <div class="control">
                     <input class="input" type="email" id="email" name="email" required/>
                   </div>
                 </div>
                 <div class="field">
-                  <label class="label">Partners/Children</label>
+                  <label class="label">Partners/Children:</label>
                   <div class="control">
                     <input class="input" type="number" id="guests" name="guests" required/>
                   </div>
                 </div>
                 <div class="field">
-                  <label class="label">Invite Code</label>
+                  <label class="label">Invite Code:</label>
                   <div class="control">
                     <input class="input" type="text" id="inviteCode" name="inviteCode" required/>
                   </div>
                   <p id="invite-warn" class="help is-danger">This code is invalid</p>
                 </div>
                 <div class="control">
-                  <button type="submit" class="button is-primary">RSVP</button>
+                  <button type="submit" class="button is-light">Submit</button>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <hr class="hr" />
-              <h3 class="heading">How We Met</h3>
+    <section class="section" id="how-we-met">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+              <h3 class="heading">About Us</h3>
               <p>
                 Once upon a time...
               </p>
-              <hr class="hr" />
-              <h3 class="heading">Engagement</h3>
-              <p>
-                A story with fried rice.
-              </p>
+              <figure class="image">
+                <img class="is-rounded" src="static/round_us.jpg">
+              </figure>
+
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
             <div class="content">
+              <h3 class="heading" id="faq">FAQ</h3>
+              <p>
+                Frequently Attacked Quesadillas
+              </p>
             </div>
           </div>
         </div>
@@ -100,7 +187,7 @@
             <p class="has-text-centered">Success</p>
           </div>
           <div class="message-body has-text-justified">
-            Wow that actually worked... I mean of course it did, Jacky is a great programmer! Thank you very much for taking the time to RSVP. We very much look forward having a good time with you at our wedding :)
+            Wow that actually worked... I mean of course it did, Jacky is a great programmer! Thank you for taking the time to RSVP. We look forward having a swell time with you at our wedding :)
           </div>
         </article>
       </div>

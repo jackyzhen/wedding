@@ -20,7 +20,8 @@
     "build": "rm -rf public && mkdir public && cp -r static public/ && cp index.html public/index.html && npm run css-deploy && npm run js-build",
     "js-build": "BABEL_ENV=production babel js --out-dir public/lib",
     "js-watch": "npm run js-build -- --watch",
-    "mv-static": "cpx ./index.html public/ --watch && cpx ./static/* public/static/ --watch",
-    "start": "npm-run-all --parallel mv-static css-watch js-watch"
+    "mv-html": "cpx ./index.html public/ --watch",
+    "mv-static": "cpx ./static/**/*.* public/static --watch",
+    "start": "npm-run-all --parallel mv-html mv-static css-watch js-watch"
   }
 }

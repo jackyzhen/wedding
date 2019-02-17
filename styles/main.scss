@@ -26,12 +26,47 @@
    // 4. Import the rest of Bulma
  */
 
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+@font-face {
+  font-family: 'coquette_bold';
+  src: url('../static/coquette_bold-webfont.woff2') format('woff2'),
+  url('../static/coquette_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'coquette_light';
+  src: url('../static/coquette_light-webfont.woff2') format('woff2'),
+  url('../static/coquette_light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'coquette_regular';
+  src: url('../static/coquette_regular-webfont.woff2') format('woff2'),
+  url('../static/coquette_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$family-sans-serif: "coquette_regular",  "Helvetica", "Arial", sans-serif;
+$body-background-color: #FFD6C7;
+$body-color: #525252;
+$primary: #FFD6C7;
+$link: #FFD6C7;
+$secondary: #525252;
+
 @import "../node_modules/bulma/bulma";
 
 .us {
   background-image: linear-gradient(
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.1)
+    rgba(255, 214, 199, 0.0),
+    rgba(255, 214, 199, 0.1)
   ), url(../static/us.jpg);
   background-size: cover;
   position: relative;
@@ -39,5 +74,40 @@
 }
 
 .heading, .subtitle {
+  text-transform: none;
+}
+
+.logo {
+  font-family: coquette_bold;
+  font-size: 4rem !important;
+  color: $primary !important;
   text-shadow: 0 1px 0 black;
+}
+
+.small-logo {
+  font-family: coquette_bold;
+  font-size: 2rem;
+}
+
+.content h3 {
+  color: #d78300
+}
+.content h1,
+.content h2,
+.content h4,
+.content h5,
+.content h6 {
+  color: $body-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#map {
+  min-height: 750px;
+}
+
+.footer {
+  padding: 2rem 1.5rem 2rem;
 }
