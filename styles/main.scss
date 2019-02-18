@@ -55,10 +55,10 @@
 }
 
 $family-sans-serif: "coquette_regular",  "Helvetica", "Arial", sans-serif;
-$body-background-color: #FFD6C7;
+$body-background-color: #FFEAE3; //#FFD6C7;
 $body-color: #525252;
-$primary: #FFD6C7;
-$link: #FFD6C7;
+$primary: #FFEAE3; // #FFD6C7;
+// $link: #FFD6C7;
 $secondary: #525252;
 
 @import "../node_modules/bulma/bulma";
@@ -110,4 +110,23 @@ html {
 
 .footer {
   padding: 2rem 1.5rem 2rem;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+#marriage {
+  background-color: white;
+}
+
+#rsvp {
+  background-color: white;
+}
+
+#photos {
+  background-color: white;
+}
+
+.intro, .about {
+  margin: 4rem 0 4rem 0;
 }

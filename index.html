@@ -10,6 +10,20 @@
 
   </head>
   <body>
+    <div class="modal" id="modal">
+      <div id="modal-background" class="modal-background"></div>
+      <div class="modal-content">
+        <article class="message is-success">
+          <div class="message-header">
+            <p class="has-text-centered">Success</p>
+          </div>
+          <div class="message-body has-text-justified">
+            Wow that actually worked... I mean of course it did, Jacky is a great programmer! Thank you for taking the time to RSVP. We look forward having a swell time with you at our wedding :)
+          </div>
+        </article>
+      </div>
+      <button id="close-modal" class="modal-close is-large" aria-label="close"></button>
+    </div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://jackyandsadhana.com">
@@ -22,7 +36,6 @@
           <span aria-hidden="true">Marriage</span>
           <span aria-hidden="true">Venue</span>
           <span aria-hidden="true">RSVP</span>
-          <span aria-hidden="true">About Us</span>
           <span aria-hidden="true">FAQ</span>
         </a>
       </div>
@@ -34,9 +47,6 @@
           </a>
           <a class="navbar-item" href="#venue">
             Venue
-          </a>
-          <a class="navbar-item" href="#how-we-met">
-            About Us
           </a>
           <a class="navbar-item" href="#faq">
             FAQ
@@ -73,7 +83,7 @@
     </section>
 
     <section class="section" id="marriage">
-      <div class="container">
+      <div class="container intro">
         <div class="columns">
           <div class="column is-8-desktop is-offset-2-desktop">
             <div class="content has-text-centered">
@@ -85,6 +95,42 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="container about">
+          <div class="tile is-ancestor">
+            <div class="tile is-4 is-parent">
+              <div class="tile is-child has-text-centered">
+                <figure class="image is-square">
+                  <img class="is-rounded" src="static/sadhana.jpg" />
+                </figure>
+                <br/>
+                <p>Sadhana Chandra Mohan</p>
+              </div>
+            </div>
+            <div class="tile is-4 is-parent">
+              <div class="tile is-child has-text-justified">
+                <article>
+                  <h4 class="heading is-size-4 has-text-centered">The Bride and Groom</h4>
+
+                  <p>Sadhana and Jacky were supposed to have first met in primary school. Unfortunately, a few months prior to Jacky starting in what would have been the same year and class, Sadhana had left with her family to America.</p>
+
+                  <p>The destiny of love could not be stopped however, as fate bought her back to Auckland to attend the same highschool a few years later. Destiny gave their love a second chance to blossom; it could not be stopped... except by akward teenage social behavior. Sadhana and Jacky went through 5 years of high school together, sharing classes and having mutual friends, but barely exchanging any words. </p>
+
+                  <p>This seemed like a difficult case for Cupid to tackle, but the god of love did not give up. It waited until university to strike the couple with true love's arrow. It was during this often stressful and trying time as students that they were able to find and support each other, allowing a loving bond to bloom. Since then they have continued to support each other through good times and bad times. Now they are ready to take the next step and get hitched!</p>
+                </article>
+              </div>
+            </div>
+            <div class="tile is-4 is-parent">
+              <div class="tile is-child  has-text-centered">
+                <figure class="image is-square">
+                  <img class="is-rounded" src="static/jacky.jpg" />
+                </figure>
+                <br/>
+                <p>Jacky Zhen</p>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <section class="section" id="venue">
@@ -103,6 +149,7 @@
         </div>
       </div>
     </section>
+
     <section class="section" id="rsvp">
       <div class="container">
         <div class="columns">
@@ -145,54 +192,64 @@
       </div>
     </section>
 
-    <section class="section" id="how-we-met">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-8-desktop is-offset-2-desktop">
-            <div class="content">
-              <h3 class="heading">About Us</h3>
-              <p>
-                Once upon a time...
-              </p>
-              <figure class="image">
-                <img class="is-rounded" src="static/round_us.jpg">
-              </figure>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="faq">
       <div class="container">
         <div class="columns">
           <div class="column is-8-desktop is-offset-2-desktop">
             <div class="content">
               <h3 class="heading" id="faq">FAQ</h3>
-              <p>
-                Frequently Attacked Quesadillas
-              </p>
+              <ul>
+                <li><strong>Where is the ceremony? </strong> </li>
+                <p>
+                  <a href="#venue">Sorrento in the Park</a>: Cornwall Park. 670 Manukau Rd, Royal Oak, Auckland NZ.
+                </p>
+                <li><strong>Where is the reception? </strong></li>
+                <p><a href="#venue"><span>Same venue as ceremony: Sorrento in the Park.</span></a></p>
+
+                <li><strong>What time should I arrive? </strong></li>
+                <p>Please be seated for the ceremony by 03.15pm.</p>
+
+                <li> <strong>Do I have to mail back my RSVP or can I RSVP online?</strong></li>
+                <p>Please use the <a href="#rsvp">RSVP form on this website</a>, or email us at <a href="mailto:rsvp@jackyandsadhana.com?subject=RSVP">rsvp@jackyandsadhana.com</a></p>
+
+                <li> <strong>When should I RSVP by?</strong> </li>
+                <p>Please send in your RSVP by the <strong>June 23rd.</strong></p>
+
+                <li><strong>What is the dress code for your wedding?</strong></li>
+                <p>We want this to be a fun and relaxed event. Please wear what you're confortable in. Please try to avoid red and gold colours as those will be the Bride's primary colours.</p>
+
+                <li><strong>Is there parking available near the ceremony and reception venues?</strong></li>
+                <p>Yes there is parking available at the venue as well as many in the surrounding Cornwall Park area.</p>
+
+                <li><strong>Can I bring a plus one or children?</strong></li>
+                <p>Sure, please do! Just let us know in the RSVP.</p>
+
+                <li><strong>Will the ceremony be taking place indoors or outdoors?</strong></li>
+                <p>We are planning to hold the ceremony in an uncovered inner garden of the venue.</p>
+
+                <li><strong>What type of food will be served?</strong></li>
+                <p>We are planning the catering to be indian and chinese themed, with vegetarian and gluten-free options.</p>
+
+                <li><strong>Is there someone I can contact if I have any other questions about the wedding?</strong></li>
+                <p>Feel free to email us at <a href="mailto:rsvp@jackyandsadhana.com?subject=Questions">rsvp@jackyandsadhana.com</a></p>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="modal" id="modal">
-      <div id="modal-background" class="modal-background"></div>
-      <div class="modal-content">
-        <article class="message is-success">
-          <div class="message-header">
-            <p class="has-text-centered">Success</p>
+    <section class="section" id="photos">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content has-text-centered">
+              <h3 class="heading heading is-size-3">Photos of the Couple</h3>
+            </div>
           </div>
-          <div class="message-body has-text-justified">
-            Wow that actually worked... I mean of course it did, Jacky is a great programmer! Thank you for taking the time to RSVP. We look forward having a swell time with you at our wedding :)
-          </div>
-        </article>
+        </div>
       </div>
-      <button id="close-modal" class="modal-close is-large" aria-label="close"></button>
-    </div>
+    </section>
 
     <footer class="footer has-text-centered">
       <div class="container">
@@ -207,6 +264,7 @@
         </div>
       </div>
     </footer>
+
     <script type="text/javascript" src="lib/main.js"></script>
   </body>
 </html>
