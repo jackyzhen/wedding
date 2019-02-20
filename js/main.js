@@ -55,6 +55,8 @@ function resetForm() {
   emailField.value = "";
   guestsField.value = "";
   inviteField.value = "";
+  adviceField.value = "";
+  favouriteField.value = "";
 }
 
 function toggleSuccessModal() {
