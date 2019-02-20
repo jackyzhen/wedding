@@ -58,19 +58,20 @@ $family-sans-serif: "coquette_regular",  "Helvetica", "Arial", sans-serif;
 $body-background-color: #FFEAE3; //#FFD6C7;
 $body-color: #525252;
 $primary: #FFEAE3; // #FFD6C7;
-// $link: #FFD6C7;
-$secondary: #525252;
+$link: #d78300;
+$secondary: #d78300;
+$dark: $secondary;
 
 @import "../node_modules/bulma/bulma";
 
 .us {
   background-image: linear-gradient(
-    rgba(255, 214, 199, 0.0),
-    rgba(255, 214, 199, 0.1)
-  ), url(../static/us.jpg);
+    rgba(255, 214, 199, 0.1),
+    rgba(255, 214, 199, 0.5)
+  ), url(../static/us_big.jpg);
+  background-position: center center;
+  background-repeat:no-repeat;
   background-size: cover;
-  position: relative;
-  min-height: 750px;
 }
 
 .heading, .subtitle {
@@ -81,7 +82,8 @@ $secondary: #525252;
   font-family: coquette_bold;
   font-size: 4rem !important;
   color: $primary !important;
-  text-shadow: 0 1px 0 black;
+  text-shadow: 2px 2px 0 $body-color;
+  margin-top: 18rem;
 }
 
 .small-logo {
@@ -90,7 +92,7 @@ $secondary: #525252;
 }
 
 .content h3 {
-  color: #d78300
+  color: $secondary;
 }
 .content h1,
 .content h2,
@@ -115,18 +117,35 @@ html {
 ul {
   list-style: none; /* Remove default bullets */
 }
-#marriage {
+
+#marriage, #rsvp, #photos {
   background-color: white;
 }
 
-#rsvp {
-  background-color: white;
+.main-heading {
+  margin-top: 2rem;
 }
 
-#photos {
-  background-color: white;
-}
 
 .intro, .about {
-  margin: 4rem 0 4rem 0;
+  margin: 4rem 0 6rem 0;
+}
+
+.lower-heading {
+  margin-bottom: 1.5rem;
+}
+
+.iframe-container {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 60%; /* aspect ratio */
+  position: relative;
+  iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }

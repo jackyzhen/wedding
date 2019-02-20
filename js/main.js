@@ -3,6 +3,8 @@ const nameField = document.getElementById("name");
 const emailField = document.getElementById("email");
 const guestsField = document.getElementById("guests");
 const inviteField = document.getElementById("inviteCode");
+const adviceField = document.getElementById("advice");
+const favouriteField = document.getElementById("favourite");
 
 const inviteHash =
   "b5f57d8e7e1a335199c661a433e23d45c1ba707ec4b2af4ef057de28caef80e9";
@@ -32,8 +34,10 @@ form.addEventListener("submit", e => {
   const email = emailField.value;
   const guests = guestsField.value;
   const invite = inviteField.value;
+  const advice = adviceField.value;
+  const favourite = favouriteField.value;
 
-  const data = `form-name=RSVP&name=${name}&email=${email}&guests=${guests}&inviteCode=${invite}`;
+  const data = `form-name=RSVP&name=${name}&email=${email}&guests=${guests}&inviteCode=${invite}&advice=${advice}&favourite=${favourite}`;
   const request = new XMLHttpRequest();
   request.open("POST", "/", true);
   request.setRequestHeader(

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="highest">
+<html class="has-navbar-fixed-top">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,8 @@
       </div>
       <button id="close-modal" class="modal-close is-large" aria-label="close"></button>
     </div>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://jackyandsadhana.com">
           <span class="small-logo">S</span>
@@ -33,14 +34,13 @@
         </a>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true">Marriage</span>
-          <span aria-hidden="true">Venue</span>
-          <span aria-hidden="true">RSVP</span>
-          <span aria-hidden="true">FAQ</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item" href="#marriage">
             Marriage
@@ -51,48 +51,54 @@
           <a class="navbar-item" href="#faq">
             FAQ
           </a>
-
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary" href="#rsvp">
-                <strong>RSVP</strong>
+              <a class="button is-dark" href="#rsvp">
+                RSVP
               </a>
             </div>
           </div>
         </div>
       </div>
     </nav>
-    <section class="hero is-medium is-primary us">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-8-desktop is-offset-2-desktop has-text-centered">
 
-              <h1 class="heading title is-2 is-spaced logo">
-                <span>Sadhana</span>
-                <img src="static/wedding-ring.svg" width="70" height="70" class="big-icon" />
-                <span>Jacky</span>
-              </h1>
+    <section class="hero is-fullheight us">
+      <div class="hero-body">
+        <div class ="container has-text-centered">
+          <div class="columns title heading logo">
+            <div class="column"> </div>
+            <div class="column is-narrow">
+              <h1>Sadhana</h1>
             </div>
+            <div class="column is-narrow">
+              <img src="static/wedding-ring.svg" width="70" height="70" class="big-icon" />
+            </div>
+            <div class="column is-narrow">
+              <h1>Jacky</h1>
+            </div>
+            <div class="column"> </div>
           </div>
         </div>
+        <!-- <div class="container has-text-centered">
+             <h1 class="heading title logo">
+             <span>Sadhana</span>
+             <img src="static/wedding-ring.svg" width="70" height="70" class="big-icon" />
+             <span>Jacky</span>
+             </h1>
+             </div> -->
       </div>
     </section>
 
     <section class="section" id="marriage">
-      <div class="container intro">
-        <div class="columns">
-          <div class="column is-8-desktop is-offset-2-desktop">
-            <div class="content has-text-centered">
-              <h3 class="heading is-size-3">Sadhana and Jacky are getting married...</h3>
-              <p class="is-size-5">
-                On the 31st of August, and we'd love for you to come celebrate with us!
-              </p>
-            </div>
-          </div>
+      <div class="container intro has-text-centered">
+        <div class="content">
+          <h3 class="heading is-size-3">Sadhana and Jacky are getting married...</h3>
+          <p class="is-size-5">
+            On the 31st of August, and they would love for you to come celebrate with them!
+          </p>
         </div>
       </div>
       <div class="container">
@@ -110,7 +116,7 @@
             <div class="tile is-4 is-parent">
               <div class="tile is-child has-text-justified">
                 <article>
-                  <h4 class="heading is-size-4 has-text-centered">The Bride and Groom</h4>
+                  <h4 class="heading is-size-4 has-text-centered lower-heading">The Bride and Groom</h4>
 
                   <p>Sadhana and Jacky were supposed to have first met in primary school. Unfortunately, a few months prior to Jacky starting in what would have been the same year and class, Sadhana had left with her family to America.</p>
 
@@ -138,13 +144,15 @@
         <div class="columns">
           <div class="column is-8-desktop is-offset-2-desktop">
             <div class="content has-text-centered">
-              <h3 class="heading heading is-size-3">Venue</h3>
+              <h3 class="heading main-heading is-size-3">Venue</h3>
               <p class="is-size-5"><strong>Saturday, 31st August 2019</strong></p>
               <p class="is-size-5">Sorrento in the Park, Cornwall Park. 670 Manukau Rd, Royal Oak, Auckland NZ. </p>
               <p class="is-size-5"> Please be seated for the ceremony by <strong>03.15pm</strong>.</p>
               <p class="is-size-5">Reception to follow after.</p>
 
-              <iframe width="750" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz6XbcaJIDW0RQBpwF2akc9k&key=AIzaSyDnsHEzFvjPjlr6xtjQ4zsAewD45lkYXpI" allowfullscreen></iframe>            </div>
+              <div class="iframe-container">
+                <iframe width="750" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz6XbcaJIDW0RQBpwF2akc9k&key=AIzaSyDnsHEzFvjPjlr6xtjQ4zsAewD45lkYXpI" allowfullscreen></iframe>            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -155,35 +163,47 @@
         <div class="columns">
           <div class="column is-8-desktop is-offset-2-desktop">
             <div class="content has-text-justified">
-              <h3 class="heading">RSVP</h3>
+              <h3 class="heading main-heading">RSVP</h3>
               <form id="rsvp-form" name="RSVP" method="POST" data-netlify="true">
                 <div class="field">
                   <label class="label">Your Name:</label>
                   <div class="control">
-                    <input class="input" type="text" id="name" name="name" required/>
+                    <input class="input" type="text" id="name" name="name" required placeholder="e.g. Harry Potter"/>
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Email:</label>
                   <div class="control">
-                    <input class="input" type="email" id="email" name="email" required/>
+                    <input class="input" type="email" id="email" name="email" required placeholder="e.g. harry@hogwarts.wiz"/>
                   </div>
                 </div>
                 <div class="field">
-                  <label class="label">Partners/Children:</label>
+                  <label class="label">Number of Partners/Children:</label>
                   <div class="control">
-                    <input class="input" type="number" id="guests" name="guests" required/>
+                    <input class="input" type="number" id="guests" name="guests" />
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Would you like to share any pearls of wisdom for the soon-to-be newlyweds?</label>
+                  <div class="control">
+                    <textarea class="textarea has-fixed-size" id="advice" name="guests" placeholder="e.g. Always listen to Jacky..."></textarea>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">What's your favourite part during weddings?</label>
+                  <div class="control">
+                    <textarea class="textarea has-fixed-size" id="favourite" name="guests" placeholder="e.g. The food..."></textarea>
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Invite Code:</label>
                   <div class="control">
-                    <input class="input" type="text" id="inviteCode" name="inviteCode" required/>
+                    <input class="input" type="text" id="inviteCode" name="inviteCode" required placeholder="found on the physical invite..."/>
                   </div>
                   <p id="invite-warn" class="help is-danger">This code is invalid</p>
                 </div>
                 <div class="control">
-                  <button type="submit" class="button is-light">Submit</button>
+                  <button type="submit" class="button is-dark">Submit</button>
                 </div>
               </form>
             </div>
@@ -197,7 +217,7 @@
         <div class="columns">
           <div class="column is-8-desktop is-offset-2-desktop">
             <div class="content">
-              <h3 class="heading" id="faq">FAQ</h3>
+              <h3 class="heading main-heading">FAQ</h3>
               <ul>
                 <li><strong>Where is the ceremony? </strong> </li>
                 <p>
@@ -244,7 +264,7 @@
         <div class="columns">
           <div class="column is-8-desktop is-offset-2-desktop">
             <div class="content has-text-centered">
-              <h3 class="heading heading is-size-3">Photos of the Couple</h3>
+              <h3 class="heading main-heading is-size-3">Photos of the Couple</h3>
             </div>
           </div>
         </div>
