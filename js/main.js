@@ -106,6 +106,26 @@ function toggleClass(el, className) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger");
+  const navMenu = document.getElementById("menu");
+
+  burger.addEventListener("click", () => {
+    toggleClass(burger, "is-active");
+    toggleClass(navMenu, "is-active");
+  });
+
+  Array.prototype.forEach.call(
+    document.getElementsByClassName("navbar-item"),
+    el => {
+      el.addEventListener("click", () => {
+        toggleClass(burger, "is-active");
+        toggleClass(navMenu, "is-active");
+      });
+    }
+  );
+});
+
 // simple sha256 from http://geraintluff.github.io/sha256/
 function sha256(ascii) {
   function rightRotate(value, amount) {
