@@ -1,10 +1,13 @@
 const form = document.getElementById("rsvp-form");
 const nameField = document.getElementById("name");
 const emailField = document.getElementById("email");
-const guestsField = document.getElementById("guests");
+const partnerField = document.getElementById("partner");
+const childrenField = document.getElementById("children");
+const foodField = document.getElementById("food");
 const inviteField = document.getElementById("inviteCode");
 const adviceField = document.getElementById("advice");
 const favouriteField = document.getElementById("favourite");
+const additionalField = document.getElementById("additional");
 
 const inviteHash =
   "b5f57d8e7e1a335199c661a433e23d45c1ba707ec4b2af4ef057de28caef80e9";
@@ -32,12 +35,14 @@ form.addEventListener("submit", e => {
 
   const name = nameField.value;
   const email = emailField.value;
-  const guests = guestsField.value;
+  const partner = partnerField.value;
+  const children = childrenField.value;
+  const food = foodField.value;
   const invite = inviteField.value;
   const advice = adviceField.value;
   const favourite = favouriteField.value;
 
-  const data = `form-name=RSVP&name=${name}&email=${email}&guests=${guests}&inviteCode=${invite}&advice=${advice}&favourite=${favourite}`;
+  const data = `form-name=RSVP&name=${name}&email=${email}&partner=${partner}&children=${children}&food=${food}&advice=${advice}&favourite=${favourite}&additional=${additional}&inviteCode=${invite}`;
   const request = new XMLHttpRequest();
   request.open("POST", "/", true);
   request.setRequestHeader(
@@ -53,10 +58,13 @@ form.addEventListener("submit", e => {
 function resetForm() {
   nameField.value = "";
   emailField.value = "";
-  guestsField.value = "";
+  partnerField.value = "";
+  childrenField.value = "";
+  foodField.value = "";
   inviteField.value = "";
   adviceField.value = "";
   favouriteField.value = "";
+  additionalField.value = "";
 }
 
 function toggleSuccessModal() {
