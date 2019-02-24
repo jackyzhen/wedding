@@ -41,6 +41,7 @@ form.addEventListener("submit", e => {
   const invite = inviteField.value;
   const advice = adviceField.value;
   const favourite = favouriteField.value;
+  const additional = additionalField.value;
 
   const data = `form-name=RSVP&name=${name}&email=${email}&partner=${partner}&children=${children}&food=${food}&advice=${advice}&favourite=${favourite}&additional=${additional}&inviteCode=${invite}`;
   const request = new XMLHttpRequest();
