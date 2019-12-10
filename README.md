@@ -2,12 +2,7 @@
 
 Hosted at [jackyandsadhana.com](https://jackyandsadhana.com)
 
+Static html/css/js wedding site. Bulma css for styling, hosted on netlify and using netlify-forms.
+Js run through babel for latest features and minification.
 
-## TODO
-
-- Basic skeleton design/idea
-  - Should fit the theme of the physical invites.
-  - Work out what features should be available for MVP and nice to haves.
-- Look at options for frameworks.
-  - Figure out netlify form feature.
-- Make the website
+Form auth validation is just hardcoded hash check. No server side validation anyway.
